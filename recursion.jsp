@@ -34,7 +34,10 @@ public int factorial(int value)
        */
 
 	//TODO
-
+	if (value == 1)
+	{
+		return value;
+	}
 
       /*
        * Here is the recursive statement. The function calls itself when the base case is not met.
@@ -45,7 +48,11 @@ public int factorial(int value)
        */
 
 	//TODO
-
+	else
+	{
+		
+		return value*factorial(value-1);
+	}
 }
 
     /**
@@ -66,12 +73,21 @@ public int factorial(int value)
      */
 public int fibonacci(int n)
 {
-
-
 	//TODO
+	if (n == 0)
+	{
+		return 0;
+	}
 
-
-    
+	else if (n == 1)
+	{
+		return 1;
+	}
+	else 
+	{
+		return fibonacci(n-2)+fibonacci(n-1);
+	}
+}    
     /**
      * Class that represents a tree. This is a data structure comprised of several nodes. Each node may
      * have some number of "child" nodes. These are linked to via its "children" lists. Each node also
@@ -101,21 +117,26 @@ protected final class Tree
     public Tree(int value)
     {
 	//TODO
+	this.children = new ArrayList<Tree>();
+	this.value = value;
     }
     
     public int getValue()
     {
 	//TODO
+	return value;
     }
     
     public ArrayList<Tree> getChildren()
     {
 	//TODO
+	return children;
     }
     
     public void add(Tree child)
     {
 	//TODO
+	this.children.add(child);
     }
 }
     
@@ -145,8 +166,13 @@ public int nnaryTreeSize(int branchingFactor, int height)
     if (height == 1) 
     {
 	//TODO
+	return 1;
     }
 	//TODO
+	else 
+	{
+		return branchingFactor*branchingFactor + nnaryTreeSize(branchingFactor, height-1);
+	}
 }
 
     /**
