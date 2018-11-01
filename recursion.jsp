@@ -171,7 +171,7 @@ public int nnaryTreeSize(int branchingFactor, int height)
 	//TODO
 	else 
 	{
-		return branchingFactor + nnaryTreeSize(branchingFactor*branchingFactor, height-1);
+		return 1+branchingFactor*nnaryTreeSize(branchingFactor, height-1);
 	}
 }
 
@@ -186,7 +186,13 @@ public int nnaryTreeSize(int branchingFactor, int height)
 public int treeSum(Tree tree)
 {
 	//TODO
+	int sum = tree.getValue();
 	
+	for(Tree t: tree.getChildren())
+	{
+		sum += treeSum(t);
+	}
+	return sum;
 }
     
     /**
