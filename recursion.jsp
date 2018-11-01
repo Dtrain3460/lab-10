@@ -11,8 +11,8 @@
  * 
  * This lab tests your ability to implement recursion for several functions.
  * 
- * @author Stephen
- * @version 2018-04-23
+ * @author Stephen, Dan Tran
+ * @version 2018-11-01
  * @Edited by Mukhtar to make compatible with JSP on 2018-10-20
  */
 
