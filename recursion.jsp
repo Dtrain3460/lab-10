@@ -171,7 +171,7 @@ public int nnaryTreeSize(int branchingFactor, int height)
 	//TODO
 	else 
 	{
-		return branchingFactor*branchingFactor + nnaryTreeSize(branchingFactor, height-1);
+		return branchingFactor + nnaryTreeSize(branchingFactor*branchingFactor, height-1);
 	}
 }
 
@@ -186,6 +186,7 @@ public int nnaryTreeSize(int branchingFactor, int height)
 public int treeSum(Tree tree)
 {
 	//TODO
+	
 }
     
     /**
